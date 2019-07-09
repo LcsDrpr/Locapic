@@ -13,11 +13,11 @@ var usersRouter = require('./routes/users');
 var app = express();
 //setup facebook login
 passport.use(new FacebookStrategy({
-  clientID: "454835635066902",
-  clientSecret: "f912d3ed57784cc5b7d748f6889c6525",
+  clientID: "336141083976865",
+  clientSecret: "61fb5fb3f32ee64a113e3ab852a142fc",
 
 
-  callbackURL: 'https://challengefacebookback.herokuapp.com/auth/facebook/callback',
+  callbackURL: 'https://locapicapp.herokuapp.com/auth/facebook/callback',
 
   profileFields: ['id', 'first_name', 'last_name', 'email'],
 
