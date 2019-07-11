@@ -27,10 +27,10 @@ router.get('/auth/facebook/callback',
   }
 );
 
-router.post('/logPosition/:firstname/:lastname/:email/:userid/:', function(req, res, next) {
+router.post('/logPosition/', function(req, res, next) {
   // Here, we want to find every movies that we have in our collection movies on mlab
 
-  userModel.findOne({facebookid : req.params.userid}, function(error, user){
+  userModel.findOne({facebookid : req.body.userid}, function(error, user){
 
     if(user){
 
@@ -43,13 +43,13 @@ router.post('/logPosition/:firstname/:lastname/:email/:userid/:', function(req, 
       
     }else{
       const newUser = new userModel({
-        firstname:req.params.firstname,
-        lastname:req.params.lastname,
-        email:req.params.email,
+        firstname:req.body.firstname,
+        lastname:req.body.lastname,
+        email:req.body.email,
         facebookid:req.params.facebookid,
         historiquePosition : {
-            longitude:String,
-            latitude:String,
+            longitude:req.body.latitude,
+            latitude:req.body.longitude,
         }
       });
 
