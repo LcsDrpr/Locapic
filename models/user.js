@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-// var positionSchema = mongoose.Schema({
-//     longitude:String,
-//     latitude:String,
-// })
+var positionSchema = mongoose.Schema({
+    longitude:String,
+    latitude:String,
+})
 
 
 const userSchema = mongoose.Schema({
@@ -11,10 +11,7 @@ const userSchema = mongoose.Schema({
     lastname:String,
     email:String,
     facebookid:String,
-    historiquePosition : {
-        longitude:String,
-        latitude:String,
-    }
+    historiquePosition : [positionSchema]
 });
 
 const userModel = mongoose.model('users', userSchema);

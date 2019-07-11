@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+const userModel = require('../models/user');
+
+
 
 router.get('/auth/facebook',
 
