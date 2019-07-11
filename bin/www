@@ -23,7 +23,17 @@ var server = http.createServer(app);
 var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
-  socket.broadcast.emit('hi');
+
+  socket.on('sendMessage',function(message){
+
+    console.log('Message',message);
+
+    io.emit('sendMessage',message);
+    
+  })
+
+
+
 });
 
 
