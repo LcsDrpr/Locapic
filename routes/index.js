@@ -51,8 +51,8 @@ router.post('/logPosition', function(req, res, next) {
         email:req.body.email,
         facebookid:req.params.facebookid,
         historiquePosition : {
-            longitude:req.body.latitude,
-            latitude:req.body.longitude,
+            longitude:req.body.longitude,
+            latitude:req.body.latitude,
         }
       });
 
