@@ -11,6 +11,7 @@ const userSchema = mongoose.Schema({
     lastname:String,
     email:String,
     facebookid:String,
+    profilpic:String,
     historiquePosition : [positionSchema]
 });
 
