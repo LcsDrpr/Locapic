@@ -21,7 +21,7 @@ passport.use(new FacebookStrategy({
 
   callbackURL: 'https://locapicapp.herokuapp.com/auth/facebook/callback',
 
-  profileFields: ['id', 'first_name', 'last_name', 'email', 'gender'],
+  profileFields: ['id', 'first_name', 'last_name', 'email', 'picture'],
 
   passReqToCallback: true
 
