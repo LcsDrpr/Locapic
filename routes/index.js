@@ -50,7 +50,7 @@ router.post('/logPosition', function(req, res, next) {
         firstname:req.body.firstname,
         lastname:req.body.lastname,
         email:req.body.email,
-        profpic : req.body.profil_pic,
+        picture : req.body.picture,
         facebookid:req.params.facebookid,
         historiquePosition : {
             longitude:req.body.longitude,
