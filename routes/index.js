@@ -26,7 +26,8 @@ router.get('/auth/facebook/callback',
       +"?userId="+req.user.id
       +"&firstName="+req.user.first_name 
       +"&lastName="+req.user.last_name
-      +"&email="+req.user.email);
+      +"&email="+req.user.email
+      +"&profile_pic="+req.user.profile_pic);
   }
 );
 
@@ -49,6 +50,7 @@ router.post('/logPosition', function(req, res, next) {
         firstname:req.body.firstname,
         lastname:req.body.lastname,
         email:req.body.email,
+        profpic : req.body.profil_pic,
         facebookid:req.params.facebookid,
         historiquePosition : {
             longitude:req.body.longitude,
