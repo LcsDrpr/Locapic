@@ -32,7 +32,6 @@ function(req,accessToken, refreshToken, profile, done) {
 
     var mergeData = {...profile._json, redirectUrl : state.redirectUrl};  
     
-   console.log(profile._json);
 
   return done(null, mergeData);
 
